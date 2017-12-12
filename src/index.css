@@ -1,0 +1,32 @@
+
+li {
+    list-style: none;
+}
+
+.navbar:hover {
+    cursor: pointer;
+}
+
+.nav-tabs>li> a:hover{
+    background: rgba(153, 209, 239, 0.1);
+}
+
+.app-container{
+    margin:20px;
+}
+
+.category-form{
+    margin: 20px 0;
+}
+
+.count-label{
+    margin-bottom:20px;
+}
+
+input[type="checkbox"]{
+    margin-right:5px;
+}
+
+.badge {
+    margin-right:10px;
+}
