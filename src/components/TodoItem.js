@@ -16,7 +16,7 @@ export default function (props) {
         <span style={{textDecoration: props.item.isDone ? "line-through" : ""}}>
             {props.item.text} &nbsp;&nbsp;
         </span>
-        <span>{formatTime}</span>
+        <span className="pull-right">{formatTime}</span>
         <button type="button"
                 className="close pull-right"
                 aria-hidden="true"
