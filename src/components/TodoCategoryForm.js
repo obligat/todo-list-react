@@ -34,7 +34,7 @@ export default class TodoCategoryForm extends React.Component {
                     <input type="text" className="form-control" ref="item"
                            onChange={this.onChange}
                            value={this.state.item}/>
-                    <span className="input-group-addon" onClick={this.handleSubmit}>Add</span>
+                    <span className="input-group-addon add-btn" onClick={this.handleSubmit}>Add</span>
                 </div>
             </form>
         );
