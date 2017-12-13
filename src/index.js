@@ -23,8 +23,8 @@ class TodoApp extends React.Component {
             filter: {keyword: '', status: "SHOW_ALL"},
             selectedCategory: 0,
         };*/
-        if(!todoApp.length){
-            todoApp =  [
+        if (!todoApp.length) {
+            todoApp = [
                 {
                     name: 'default',
                     items: [],
@@ -105,6 +105,7 @@ class TodoApp extends React.Component {
                 status,
             }
         });
+        return false;
     }
 
     AddCategory(newCategory) {
@@ -122,19 +123,33 @@ class TodoApp extends React.Component {
         });
     }
 
-    deleteCategory(index) {
-        let Todo = this.state.Todo;
-        let leftTodo = Todo.filter((item,id)=>!id === index);
-        localStorage.setItem('todoApp', JSON.stringify(leftTodo));
+    deleteCategory(index, e) {
+        e.preventDefault();
+        /*so important !!!*/
+        e.stopPropagation();
+        /*so important !!!*/
+
+        let copyTodo = this.state.Todo.slice();
+        copyTodo.splice(index, 1);
+
+        if (!copyTodo.length) {
+            copyTodo = [
+                {
+                    name: 'default',
+                    items: [],
+                }
+            ];
+        }
+        localStorage.setItem('todoApp', JSON.stringify(copyTodo));
         this.setState({
-            Todo: leftTodo
+            Todo: copyTodo
         });
     }
 
     render() {
         let type = this.state.selectedCategory;
         let Todo = this.state.Todo || [];
-        if(Todo.length === 0){
+        if (Todo.length === 0) {
             Todo[type] = [];
         }
         return (

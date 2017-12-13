@@ -20,7 +20,7 @@ export default function (props) {
             }
         });
 
-        return <ul>{mapItem(allItemsFilter,props)}</ul>
+        return <ul>{mapItem(queryResult,props)}</ul>
     }
 
     const doneNumber = allItems.filter(item => item.isDone).length;

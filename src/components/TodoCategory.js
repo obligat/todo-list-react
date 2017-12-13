@@ -35,9 +35,9 @@ export default class TodoCategory extends React.Component {
                                data-id={index}>
                         <span className="badge pull-left">
                             {categories.filter(t => t.isDone).length} / {categories.length}
-                        </span> {item.name || '+ new category'}
+                        </span> {item.name}
                         <button type="button"
-                                className="close pull-right" onClick={()=>this.props.deleteCategory(index)}>&times;</button>
+                                className="close pull-right" onClick={(e)=>this.props.deleteCategory(index,e)}>&times;</button>
                         </a>)
                 })}
             </div>);
