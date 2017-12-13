@@ -12,7 +12,7 @@ import TodoCategory from './components/TodoCategory';
 class TodoApp extends React.Component {
     constructor(props) {
         super(props);
-        let todoApp = JSON.parse(localStorage.getItem('todoApp'));
+        let todoApp = JSON.parse(localStorage.getItem('todoApp')) || [];
         /*this.state = {
             Todo: [
                 {
