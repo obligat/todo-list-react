@@ -16,7 +16,7 @@ export default class TodoCategory extends React.Component {
             return "list-group-item active add-btn";
         }
         else {
-            return "list-group-item ";
+            return "list-group-item add-btn";
         }
     }
 

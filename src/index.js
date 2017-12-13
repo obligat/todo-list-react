@@ -134,9 +134,9 @@ class TodoApp extends React.Component {
     render() {
         let type = this.state.selectedCategory;
         let Todo = this.state.Todo || [];
-        /*if(Todo.length === 0){
+        if(Todo.length === 0){
             Todo[type] = [];
-        }*/
+        }
         return (
             <div className="container app-container">
                 <div className="col-md-3">
