@@ -134,7 +134,6 @@ class TodoApp extends React.Component {
     render() {
         let type = this.state.selectedCategory;
         let Todo = this.state.Todo;
-        console.log(Todo);
         if(Todo.length === 0){
             Todo[type] = [];
         }
