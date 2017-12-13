@@ -13,7 +13,7 @@ export default class TodoCategory extends React.Component {
 
     checkActive(i) {
         if (i === Number(this.props.selectedId)) {
-            return "list-group-item active";
+            return "list-group-item active add-btn";
         }
         else {
             return "list-group-item ";
