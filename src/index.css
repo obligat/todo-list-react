@@ -7,26 +7,47 @@ li {
     cursor: pointer;
 }
 
-.nav-tabs>li> a:hover{
+.nav-tabs > li > a:hover {
     background: rgba(153, 209, 239, 0.1);
 }
 
-.app-container{
-    margin:20px;
+.app-container {
+    margin: 20px;
 }
 
-.category-form{
+.category-form {
     margin: 20px 0;
 }
 
-.count-label{
-    margin-bottom:20px;
+.count-label {
+    margin-bottom: 20px;
 }
 
-input[type="checkbox"]{
-    margin-right:5px;
+input[type="checkbox"] {
+    margin-right: 5px;
 }
 
 .badge {
-    margin-right:10px;
+    margin-right: 10px;
+}
+
+
+@media only screen and (max-width: 700px) and(min-width: 400px) {
+    .todo-filter-form {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .todo-filter-search {
+        display: flex;
+    }
+    
+    .todo-filter-search > form {
+        flex:1;
+    }
+
+    .todo-filter-search > ul{
+        flex:1;
+    }
 }
