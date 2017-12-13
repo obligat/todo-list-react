@@ -109,6 +109,11 @@ class TodoApp extends React.Component {
     }
 
     AddCategory(newCategory) {
+
+        if (!newCategory) {
+            return;
+        }
+
         let category = {name: newCategory, items: []};
         let newTodo = this.state.Todo.concat([category]);
         localStorage.setItem('todoApp', JSON.stringify(newTodo));
