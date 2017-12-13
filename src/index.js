@@ -123,11 +123,11 @@ class TodoApp extends React.Component {
     }
 
     deleteCategory(index) {
-        let copyTodo = this.state.Todo;
-        copyTodo.splice(index, 1);
-        localStorage.setItem('todoApp', JSON.stringify(copyTodo));
+        let Todo = this.state.Todo;
+        let leftTodo = Todo.filter((item,id)=>!id === index);
+        localStorage.setItem('todoApp', JSON.stringify(leftTodo));
         this.setState({
-            Todo: copyTodo
+            Todo: leftTodo
         });
     }
 
