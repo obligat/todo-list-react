@@ -54,3 +54,24 @@ input[type="checkbox"]:hover, .add-btn:hover {
         flex: 1;
     }
 }
+
+.todo-item-li{
+    display: flex;
+    justify-content: space-between;
+}
+
+.todo-item-text{
+    vertical-align: top;
+}
+
+.todo-item-li button{
+    margin-top: -1px;
+}
+
+.time-info{
+    color:#afd9ee;
+}
+
+
+
+

@@ -9,16 +9,20 @@ export default function (props) {
         formatTime = formatTime[1].replace(reg, '$3-$2-$1') + '  ' + formatTime[2].slice(0, -3);
     }
 
-    return (<li className="list-group-item">
-        <input type="checkbox"
-               onChange={(e) => props.handleChange(props.item.id, e)}
-               checked={props.item.isDone}/>
-        <span style={{textDecoration: props.item.isDone ? "line-through" : ""}}>
-            {props.item.text} &nbsp;&nbsp;
+    return (<li className="list-group-item todo-item-li">
+        <div>
+            <input type="checkbox"
+                   onChange={(e) => props.handleChange(props.item.id, e)}
+                   checked={props.item.isDone}/>
+            <span className="todo-item-text" style={{textDecoration: props.item.isDone ? "line-through" : ""}}>
+            {props.item.text}
         </span>
-        <button type="button"
-                className="close pull-right"
-                onClick={() => props.onRemove(props.item.id)}>&times;</button>
-        <span className="pull-right">{formatTime}</span>
+        </div>
+        <div>
+            <span className="time-info">{formatTime} &nbsp;&nbsp;</span>
+            <button type="button"
+                    className="close"
+                    onClick={() => props.onRemove(props.item.id)}>&times;</button>
+        </div>
     </li>);
 }

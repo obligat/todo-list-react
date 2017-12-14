@@ -49,6 +49,7 @@ function mapItem(obj,props) {
 
 function getFilterItems(allItems, status) {
     let allItemsFilter = allItems;
+    // eslint-disable-next-line
     switch (status) {
         case 'false':
             allItemsFilter = allItems.filter(t => !t.isDone);
